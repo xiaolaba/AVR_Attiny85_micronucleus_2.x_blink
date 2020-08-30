@@ -1,5 +1,7 @@
 # AVR_Attiny85_micronucleus_2.04_blink
-hardware, digispark rev.3, a counterfeit possible as used the brand name of Digispark, but the design is better.  
+hardware, digispark rev.3, a counterfeit possible but the PCB printed with "digispark".
+
+USB +5V through a schokty diode to power Attiny85, VF=0.2v, different from original digispark design (perhaps rev.2)
 
 bootloader, https://github.com/micronucleus/micronucleus 2.04 used
 Arduino IDE 1.8.12
