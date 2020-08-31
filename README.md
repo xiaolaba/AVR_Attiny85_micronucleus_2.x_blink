@@ -2,8 +2,13 @@
 hardware, digispark rev.3, a counterfeit possible but the PCB printed with "digispark".
 
 
-testing,
+
+embed youtube video to Github README.md
+```
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
+```
 https://youtu.be/XggN00FlNCk  
+[![AVR_Attiny85_micronuc leus_2.04_blink, testing](https://img.youtube.com/vi/XggN00FlNCk/0.jpg)](https://www.youtube.com/watch?v=XggN00FlNCk)
 .  
 .  
 
