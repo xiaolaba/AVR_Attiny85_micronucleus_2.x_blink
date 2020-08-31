@@ -15,7 +15,7 @@ https://youtu.be/XggN00FlNCk
 
 
 my schematic,  
-[pdf](clone_digispark_rev.3_PCB_circuit.jpg.pdf)  
+[clone_digispark_rev.3_PCB_circuit.jpg.pdf](clone_digispark_rev.3_PCB_circuit.jpg.pdf)  
 ![clone_digispark_rev.3_PCB_circuit.jpg](clone_digispark_rev.3_PCB_circuit.jpg)  
 .  
 .  
