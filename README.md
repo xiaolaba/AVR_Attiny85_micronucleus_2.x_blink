@@ -14,8 +14,7 @@ https://youtu.be/XggN00FlNCk
 
 
 
-my schematic,  
-[clone_digispark_rev.3_PCB_circuit.jpg.pdf](clone_digispark_rev.3_PCB_circuit.jpg.pdf)  
+my schematic,  [clone_digispark_rev.3_PCB_circuit.jpg.pdf](clone_digispark_rev.3_PCB_circuit.jpg.pdf)  
 ![clone_digispark_rev.3_PCB_circuit.jpg](clone_digispark_rev.3_PCB_circuit.jpg)  
 .  
 .  
@@ -95,6 +94,9 @@ locate the file and defination,
  */
 ```
 
+
+### burn the hex to chip   
+attiny85_burn.bat, and extrnal programmer has to be, no uses USB funcational or USB port.
 
 
 ### source code, AVR_Attiny85_micronucleus_2.04_blink
