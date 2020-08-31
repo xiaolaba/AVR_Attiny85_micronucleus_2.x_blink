@@ -1,7 +1,21 @@
 # AVR_Attiny85_micronucleus_2.04_blink
 hardware, digispark rev.3, a counterfeit possible but the PCB printed with "digispark".
 
-USB +5V through a schottky diode to power Attiny85 (Vcc+5v), VF=0.2v, different from original digispark design (perhaps rev.2)
+my schematic,  
+[pdf](clone_digispark_rev.3_PCB_circuit.jpg.pdf)  
+![clone_digispark_rev.3_PCB_circuit.jpg](clone_digispark_rev.3_PCB_circuit.jpg)  
+.  
+.  
+.  
+
+
+
+
+USB +5V through a schottky diode to power Attiny85 (Vcc+5v), VF=0.2v, different from original digispark design (perhaps rev.2)  
+![design_difference.JPG](design_difference.JPG)  
+
+
+
 
 bootloader, https://github.com/micronucleus/micronucleus 2.04 used.  
 Arduino IDE 1.8.12  
