@@ -1,11 +1,13 @@
 # AVR_Attiny85_micronucleus_2.04_blink
 hardware, digispark rev.3, a counterfeit possible but the PCB printed with "digispark".
 
-USB +5V through a schokty diode to power Attiny85, VF=0.2v, different from original digispark design (perhaps rev.2)
+USB +5V through a schottky diode to power Attiny85 (Vcc+5v), VF=0.2v, different from original digispark design (perhaps rev.2)
 
 bootloader, https://github.com/micronucleus/micronucleus 2.04 used
 Arduino IDE 1.8.12
-
+Digispark is based on V-USB (AVR-USB formerly) [https://www.obdev.at/products/vusb/index.html](https://www.obdev.at/products/vusb/index.html)
+USB VID = 0x16D0, PID=0x0753
+Arduino ATtinycore has support now (forked https://github.com/xiaolaba/ATTinyCore), win10 driver installation with Zadig is ok 
 
 
 ```
