@@ -3,13 +3,76 @@ hardware, digispark rev.3, a counterfeit possible but the PCB printed with "digi
 
 USB +5V through a schottky diode to power Attiny85 (Vcc+5v), VF=0.2v, different from original digispark design (perhaps rev.2)
 
-bootloader, https://github.com/micronucleus/micronucleus 2.04 used
-Arduino IDE 1.8.12
-Digispark is based on V-USB (AVR-USB formerly) [https://www.obdev.at/products/vusb/index.html](https://www.obdev.at/products/vusb/index.html)
-USB VID = 0x16D0, PID=0x0753
-Arduino ATtinycore has support now (forked https://github.com/xiaolaba/ATTinyCore), win10 driver installation with Zadig is ok 
+bootloader, https://github.com/micronucleus/micronucleus 2.04 used.  
+Arduino IDE 1.8.12  
+Digispark is based on V-USB (AVR-USB formerly) [https://www.obdev.at/products/vusb/index.html](https://www.obdev.at/products/vusb/index.html)  
+USB VID = 0x16D0, PID=0x0753  
+Arduino ATtinycore has support now (forked https://github.com/xiaolaba/ATTinyCore), win10 driver installation with Zadig is ok.  
+.  
+.  
+.  
+
+### compile the micronucleus bootloader (V-USB) with your own pair VID/PID   
+for example VID= 0x6666, PID= 0x8888 (testing purpose on the own, not to sell product). why do that, USB VID/PID pair has to be registered and pay for it, if you do not, and used other's but not buying hardware from the manufacturer, it is infringing the intellectual property, and USB supporting will be voilated.  
+.  
+locate the file and defination,   
+.\micronucleus\firmware\usbconfig.h  
+.  
+```
+/* -------------------------- Device Description --------------------------- */
+
+//#define USB_CFG_VENDOR_ID 0xD0, 0x16 /* = 0x16d0 */
+#define USB_CFG_VENDOR_ID 0x66, 0x66 /* VID = 6666 (Prototype product Vendor ID) */
+/* USB vendor ID for the device, low byte first. If you have registered your
+ * own Vendor ID, define it here. Otherwise you may use one of obdev's free
+ * shared VID/PID pairs. Be sure to read USB-IDs-for-free.txt for rules!
+ */
+//#define  USB_CFG_DEVICE_ID 0x53, 0x07 /* = 0x0753 = Digistump */
+#define  USB_CFG_DEVICE_ID 0x88, 0x88 /* = 0x8888, for testing */
+/* This is the ID of the product, low byte first. It is interpreted in the
+ * scope of the vendor ID. If you have registered your own VID with usb.org
+ * or if you have licensed a PID from somebody else, define it here. Otherwise
+ * you may use one of obdev's free shared VID/PID pairs. See the file
+ * USB-IDs-for-free.txt for details!
+ */
+#define USB_CFG_DEVICE_VERSION MICRONUCLEUS_VERSION_MINOR, MICRONUCLEUS_VERSION_MAJOR
+/* Version number of the device: Minor number first, then major number.
+ */
+ // electric arrow - not compliant with obdev's rules but we'll have our own vid-pid soon
+//#define USB_CFG_VENDOR_NAME 0x2301
+//#define USB_CFG_VENDOR_NAME_LEN 1
+//#define USB_CFG_VENDOR_NAME 'd','i','g','i','s','t','u','m','p','.','c','o','m'
+//#define USB_CFG_VENDOR_NAME_LEN 13
+/* These two values define the vendor name returned by the USB device. The name
+ * must be given as a list of characters under single quotes. The characters
+ * are interpreted as Unicode (UTF-16) entities.
+ * If you don't want a vendor name string, undefine these macros.
+ * ALWAYS define a vendor name containing your Internet domain name if you use
+ * obdev's free shared VID/PID pair. See the file USB-IDs-for-free.txt for
+ * details.
+ */
+//#define USB_CFG_DEVICE_NAME 0x00B5,'B'
+//#define USB_CFG_DEVICE_NAME_LEN 2
+/* Same as above for the device name. If you don't want a device name, undefine
+ * the macros. See the file USB-IDs-for-free.txt before you assign a name if
+ * you use a shared VID/PID.
+ */
+/*#define USB_CFG_SERIAL_NUMBER   'N', 'o', 'n', 'e' */
+/*#define USB_CFG_SERIAL_NUMBER_LEN   0 */
+/* Same as above for the serial number. If you don't want a serial number,
+ * undefine the macros.
+ * It may be useful to provide the serial number through other means than at
+ * compile time. See the section about descriptor properties below for how
+ * to fine tune control over USB descriptors such as the string descriptor
+ * for the serial number.
+ */
+```
 
 
+
+### source code, AVR_Attiny85_micronucleus_2.04_blink
+compile with Arduino IDE, uses AttinyCore
+onboard LED blinking
 ```
 /*
   Blink, test with ATtiny85, PB1 is connected to LED, source current
