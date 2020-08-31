@@ -1,6 +1,14 @@
 # AVR_Attiny85_micronucleus_2.04_blink
 hardware, digispark rev.3, a counterfeit possible but the PCB printed with "digispark".
 
+
+testing,
+https://youtu.be/XggN00FlNCk  
+.  
+.  
+
+
+
 my schematic,  
 [pdf](clone_digispark_rev.3_PCB_circuit.jpg.pdf)  
 ![clone_digispark_rev.3_PCB_circuit.jpg](clone_digispark_rev.3_PCB_circuit.jpg)  
