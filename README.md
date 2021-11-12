@@ -1,4 +1,4 @@
-# AVR_Attiny85_micronucleus_2.6_blink
+# AVR_Attiny85_micronucleus_2.6_blink[micronucleus_2.6_blink/](micronucleus_2.6_blink/)  
 2021-NOV-12  
 Win10 auto updated and then micronucleus_2.04 & device is not working anymore.  
 solution, re-install Zidge driver https://zadig.akeo.ie/  
