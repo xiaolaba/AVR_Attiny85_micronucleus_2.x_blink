@@ -1,0 +1,7 @@
+lfuse= 
+0xe1
+hfuse= 
+0xdd
+efuse= 
+0xfe
+
