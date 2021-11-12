@@ -5,6 +5,8 @@ solution, re-install Zidge driver https://zadig.akeo.ie/
 download micronucleus_2.6 https://github.com/micronucleus/micronucleus, author has changed the version numbering from 2.04, 2.05 and then to 2.6  
 burn bootloader only, uses usptiny, attiny85_burn default bootloader2.6.bat   
 burn bootloader + blink, burn_Attiny85_micronuclear2.6_blink.ino_hex.bat  
+done,  
+![micronucleus_2.6_blink/micronucluars_2.6_done.JPG](micronucleus_2.6_blink/micronucluars_2.6_done.JPG)
 
 
 
